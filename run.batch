@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH --job-name=asd            # Job name
+#SBATCH -N1                      # Run all processes on a single node        
+#SBATCH -n1                      # Run a single task
+#SBATCH --cpus-per-task=32       # Number of CPU cores per task
+#SBATCH --mem=40G                # Job memory request
+#SBATCH --gres=gpu:1             # The number of GPUs requested for the job
+#SBATCH --error=./%J.err	 # Standard output log file
+#SBATCH --output=./%J.out        # Standard error log file
+#SBATCH --time=11:59:00          # Time limit hrs:min:se
+#SBATCH -q gpu-single
+#SBATCH --partition=gpu
+
+ulimit -S -u 10000
+
+#cd /l/users/muhammad.ali/object_scene/object-scene-compositions-for-actions
+#cd /l/users/muhammad.ali/tiny-imagenet-200/
+cd /l/users/muhammad.ali/Flexpool_waste/
+#srun  python train.py
+srun python dummy.py
+# srun python train_img_waste.py
+#srun python train_cfar10.py
+
+#srun python zero-shot-actions.py
