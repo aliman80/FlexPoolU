@@ -1,6 +1,6 @@
 # FlexPoolU
 Implementation of FlexPooling with Simple Auxiliary Classifiers in DeepNetworks
-# Models Used
+# Models Used 
 ResNet
 VGGNet
 InceptionNet
